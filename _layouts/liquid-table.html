@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+<div class="container-md">
+  <article role="main" class="blog-post">
+    <h1>{{ page.title }}</h1>
+
+    {{ content }}
+
+    <hr>
+
+    <h2>Ryan vs Ryan</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Strengths</th>
+          <th>Weaknesses</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Reynolds</strong></td>
+          <td>
+            <ul>
+            {% for s in page.reynolds.strengths %}
+              <li>{{ s }}</li>
+            {% endfor %}
+            </ul>
+          </td>
+          <td>
+            <ul>
+            {% for w in page.reynolds.weaknesses %}
+              <li>{{ w }}</li>
+            {% endfor %}
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td><strong>Gosling</strong></td>
+          <td>
+            <ul>
+            {% for s in page.gosling.strengths %}
+              <li>{{ s }}</li>
+            {% endfor %}
+            </ul>
+          </td>
+          <td>
+            <ul>
+            {% for w in page.gosling.weaknesses %}
+              <li>{{ w }}</li>
+            {% endfor %}
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+</div>
